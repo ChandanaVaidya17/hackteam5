@@ -1,0 +1,502 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searched Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200&family=Open+Sans:wght@500;800&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="container">
+        {% comment %} {%if search%} {% endcomment %}
+        <div class="nav">
+            <div class="nav-right">
+                <div class="nav-menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <div class="logos">
+                    <img class="logoImg" src="{% static 'app/images/logo.png' %}" alt="logoImg" />
+                    <div class="logo"><a> Global judge</a></div>
+                </div>
+            </div>
+            <div class="nav-middle">
+                <span id="searchIcon" class="material-symbols-outlined">search</span>
+                <input placeholder="Search here about your destination" class="search" />
+            </div>
+            <div class="nav-left">
+                <img class="profile" src="{% static 'app/images/pic5.jpeg' %}" alt="profile" />
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <span class="explore">Explore </span>
+                <h1 class="citeName">Statue of Liberty</h1>
+            </div>
+            <div class="content">
+                <img class="citiImg" src="{% static 'app/images/3.jpg' %}" alt="city">
+                <div class="submain">
+                    <h2 class="headLine">
+                       Statue of liberty
+                    </h2>
+                    <br>
+                    <h1 class="about">About:</h1>
+                    <p class="info">Petra, Arabic Baṭrā, ancient city, centre of an Arab kingdom in Hellenistic and Roman times, the ruins of which are in southwest Jordan. The city was built on a terrace, pierced from east to west by the Wadi Mūsā (the Valley of Moses)—one of the places where, according to tradition, the Israelite leader Moses struck a rock and water gushed forth..</p>
+                    <div class="rating">
+                        <img class="star" src="{% static 'app/images/s.png' %}" alt="star" />
+                        <h1 class="count">5</h1>
+                        <p class="review-count">1 review</p>
+                    </div>
+
+                    <div class="reviews">
+                        <div class="reviews-head">
+                            <h2>Reviews</h2>
+                            <button class="filters">Filters</button>
+                        </div>
+                        <div class="review">
+                            <div class="review-header">
+                                <img class="userProfile" src="{% static 'app/images/1.jpg' %}" alt="reviewerPic">
+                                <h2 class="userName">Robin K</h2>
+                            </div>
+                            <div class="review-rating">
+                                <img class="star" src="{% static 'app/images/s.png' %}" alt="star" />
+                                <h1 class="count">5</h1>
+                            </div>
+                            <div class="comment">
+                                <h1 class="comment-title">Very Reasonably Priced Tour with Excellent Guide.</h1>
+                                <p class="comment-date">Oct2020<b>•</b>Friday</p>
+                                <p class="comment-review">Fantastic tour lead by our very knowledgeable guide Madhu. He
+                                    took
+                                    his time to explain
+                                    things and his English was
+                                    excellent. He communicated very well before the tour to let us know exactly where to
+                                    meet him. He even took us for a cup
+                                    of chai to his favourite place and most importantly, stopped us being hassled by any
+                                    one
+                                    offering tours, gifts or
+                                    otherwise.</p>
+                                <img class="uploadImage" src=".{% static 'app/images/2.jpg' %}" alt="images">
+                            </div>
+                        </div>
+                        <div class="contribute">
+                            <h2 class="write">Write a review</h2>
+                            <form class="myforms">
+                                <label for="tittle">Give a tittle<b>*</b></label>
+                                <input class="tittle" type="text" placeholder="Summarize your experience">
+                                <label for="comments">Leave your commounts<b>*</b></label>
+                                <textarea name="comment" id="comment" cols="30" rows="10"
+                                    placeholder="Highlight your exprience"></textarea>
+                                <label for="date">When did you go?</label>
+                                <input type="date">
+                                <div class="images">
+                                    <label for="images">Upload a photo</label>
+                                    <input class="choose" type="file" accept="image/*">
+                                </div>
+                                <button class="submit" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<style>
+    /* for scrollbar */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #dc143ce6;
+        border-radius: 15px;
+    }
+
+    ::-moz-selection {
+        /* Code for Firefox */
+        color: rgb(253, 253, 253);
+        background: rgb(23, 250, 235);
+    }
+
+    ::selection {
+        color: rgb(253, 253, 253);
+        background: rgb(23, 250, 235);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        background-color: whitesmoke;
+        /* border: 2px solid red; */
+        height: 100%;
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+
+    .nav {
+        display: flex;
+        padding: 20px 40px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        z-index: 0;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background-color: white;
+    }
+
+    .nav-right {
+        margin-right: auto;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .logos {
+        display: flex;
+        /* border: 2px solid red; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoImg {
+        width: 60px;
+        height: 55px;
+        /* border: 2px solid red; */
+        margin-bottom: 5px;
+        margin-left: 0;
+    }
+
+    .logo {
+        color: crimson;
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        font-size: 42.5px;
+        /* line-height: 1.4; */
+    }
+
+    .logo a {
+        text-decoration: none !important;
+    }
+
+    .nav-middle {
+        /* border: 2px solid rgb(11, 7, 7); */
+        display: flex;
+        margin-right: 30%;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 500px;
+        background-color: white;
+        border-radius: 30px;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .search {
+        text-indent: 7px;
+        font-size: 20px;
+        border: none;
+        height: 45px;
+        width: 435px;
+        background-color: transparent;
+        /* background-color: aliceblue; */
+        /* border-radius: 10px; */
+    }
+
+    .search:focus {
+        border-bottom: 2px solid crimson;
+        outline: none;
+    }
+
+    /* #searchIcon {
+    background-color: white;
+    border: 2px solid red;
+} */
+
+    .profile {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+
+    .main {
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        z-index: 0;
+    }
+
+    .citi {
+        width: 400px;
+        height: 200px;
+        padding: 50px 25px 5px 50px;
+    }
+
+    .content {
+        margin-left: 50px;
+        margin-right: 50px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        z-index: 0;
+    }
+
+    .submain {
+        padding-left: 10px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .explore {
+        color: crimson;
+        font-size: 30px;
+        font-weight: bold;
+        margin-right: 4px;
+    }
+
+    .citeName {
+        font-size: 30px;
+    }
+
+    .citeName:hover {
+        color: rgb(2, 255, 200);
+    }
+
+    .content {
+        justify-content: center;
+        margin-left: 20%;
+        /* border: 2px solid red; */
+        width: 900px;
+    }
+
+    .citiImg {
+        width: 900px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .headLine {
+        font-size: 25px;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .review-count {
+        font-family: "Noto Sans", sans-serif;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+    }
+
+    .star {
+        height: 20px;
+        width: 20px;
+        padding-left: 15px;
+    }
+
+    .count {
+        font-size: 20px;
+        margin-left: 5px;
+        margin-right: 30px;
+    }
+
+    .about {
+        font-size: 23px;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .info {
+        padding: 10px 20px 20px 20px;
+        font-family: "Noto Sans", sans-serif;
+    }
+
+    .reviews {
+        padding: 20px 0;
+    }
+
+    .reviews-head {
+        display: flex;
+        align-items: center;
+        font-family: "Open Sans", sans-serif;
+        /* border: 2px solid red; */
+        padding: 30px 0 10px 0;
+    }
+
+    .review-header {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .userProfile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+        object-fit: cover;
+
+    }
+
+    .userName {
+        font-size: 20px;
+    }
+
+    .review-rating {
+        display: flex;
+        padding: 10px;
+    }
+
+    .comment {
+        /* border: 2px solid red; */
+        padding: 10px;
+        font-family: "Noto Sans", sans-serif;
+    }
+
+    .uploadImage {
+        width: 200px;
+        /* padding: 10px; */
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        z-index: 0;
+    }
+
+    .comment-title {
+        font-size: 19px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .comment-date {
+        font-size: 17px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .comment-review {
+        /* font-size: 30px; */
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+
+
+    .filters {
+        /* color: #e61e1e; */
+        background: #de2020e0;
+        color: white;
+        padding: 6px;
+        border: 0;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-left: 15px;
+        margin: 20px;
+    }
+
+
+    .write {
+        font-family: "Open Sans", sans-serif;
+        padding: 30px 0 10px 0;
+    }
+
+    form {
+        /* border: 2px solid red; */
+        display: flex;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        flex-direction: column;
+        margin-left: 91px;
+        width: 700px;
+        height: 500%;
+    }
+
+
+    .myforms input {
+        border: none;
+        border-radius: 5px;
+        display: block;
+        font-size: 18px;
+        padding: 10px;
+        width: 96%;
+    }
+
+    .myforms input:focus {
+        outline: 0;
+    }
+
+    .myforms label {
+        padding-bottom: 5px;
+        padding-top: 10px;
+    }
+
+
+    .submit {
+        background: #de2020e0;
+        color: white;
+        width: 140px !important;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .choose::file-selector-button {
+        background: #0ef3c5e0;
+        color: black;
+        width: 140px;
+        height: 30px;
+        border: 0;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        width: 98.9%;
+        height: 150px;
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 3px;
+        background-color: white;
+        font-size: 18px;
+        resize: none;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
+    .images {
+        padding-top: 10px;
+    }
+</style>
+
+</html>
