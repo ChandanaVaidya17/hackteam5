@@ -31,7 +31,7 @@
             </div>
             <div class="nav-middle">
                 <span id="searchIcon" class="material-symbols-outlined">search</span>
-                <input placeholder="Search here about your destination" class="search" />
+                <input placeholder="Search " class="search" />
             </div>
             <div class="nav-left">
                 <img class="profile" src="{% static 'app/images/pic5.jpeg' %}" alt="profile" />
@@ -89,21 +89,41 @@ When the Spanish invaded Peru, the Incas left Machu Picchu. Nobody knows for sur
                                     offering tours, gifts or
                                     otherwise.
                                 contact him through12354687</p>
-                                <img class="uploadImage" src=".{% static 'app/images/2.jpg' %}" alt="images">
+                                <img class="uploadImage" src="{% static 'app/images/1.jpg' %}" alt="images">
                             </div>
                         </div>
                         <div class="contribute">
                             <h2 class="write">Write a review</h2>
                             <form class="myforms">
-                                <label for="tittle">Give a tittle<b>*</b></label>
-                                <input class="tittle" type="text" placeholder="Summarize your experience">
-                                <label for="comments">Leave your commounts<b>*</b></label>
+                                <label for="ratind">Give overall Rating</label>
+                                <div class="myform">
+                                    <select name="rateing" id="rateing">
+                                        <option value="- -Select 1 to 5- -">Rate</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            
+                                <label for="comments">Leave your comments<b>*</b></label>
                                 <textarea name="comment" id="comment" cols="30" rows="10"
-                                    placeholder="Highlight your exprience"></textarea>
-                                <label for="date">When did you go?</label>
+                                    placeholder="Your experience on hygiene, expenses and timings"></textarea>
+                                <label for="ratind">Rate for Hygiene</label>
+                                <div class="myform">
+                                    <select name="rateing" id="rateing">
+                                        <option value="- -Select 1 to 5- -">Rate</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                    <label for="date">Visiting date</label>
                                 <input type="date">
                                 <div class="images">
-                                    <label for="images">Upload a photo</label>
+                                    <label for="images">Add a picture</label>
                                     <input class="choose" type="file" accept="image/*">
                                 </div>
                                 <button class="submit" type="submit">Submit</button>
@@ -438,7 +458,7 @@ When the Spanish invaded Peru, the Incas left Machu Picchu. Nobody knows for sur
     }
 
 
-    .myforms input {
+    .myforms input,select {
         border: none;
         border-radius: 5px;
         display: block;
